@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Weather App</title>
 </head>
+
 <body>
 
     <div id="main">
-        
+
         <p id="weather-city">weather in: </p>
 
         <div class="input-container">
-        <input id="city" placeholder="Enter city name">
-        <button id="btn">show</button>
-            </div>
-            
-        <p id="result"></p>
+            <input id="city" placeholder="Enter city name">
+            <button id="btn">show</button>
+        </div>
 
-</div>
+
+        <div id="result">
+            <div id="box-1">
+                <h1 id="city-name">city</h1>
+                <p id="date"></p>
+
+                <script>
+                    const date = document.querySelector("#date")
+
+                    const now = new Date();
+                    const formatted = now.toLocaleDateString(`en-En`, {
+                        weekday: 'long',
+                        day: 'numeric',
+                        month: 'long'
+                    });
+                    date.textContent = formatted;
+                </script>
+                
+                </div>
+
+            <div id="box-2">
+                <img src="./img/c8cc24bba37a25c009647b8875aae0e3.jpg" alt="" width="100px" id="weather-icon">
+                <p id="temp">0°</p>
+            </div>
+            <div id="box-3">
+                <div id="wind">wind</div>
+                <div id="weather">weather</div>
+
+            </div>
+        </div>
+
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
