@@ -48,7 +48,7 @@ async function getWeather() {
 
         cityName.textContent = data.name;
         temperature.textContent = Math.floor(data.main.temp) + "°C";
-        wind.textContent = "wind" + Math.floor(data.wind.speed) + " м/с";
+        wind.textContent = "wind" + " " + Math.floor(data.wind.speed) + " m/s";
         weather.textContent = "weather: " + data.weather[0].description;
         weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
         weatherIcon.alt = data.weather[0].description;
